@@ -14,17 +14,17 @@ set(BINARY_DIR "${CMAKE_BINARY_DIR}")
 set(SOURCE_FILES
         # Headers
         rnd.h
-        triangle.h
-        rectangle.h
-        shape.h
+        bird.h
+        fish.h
+        animal.h
         container.h
 
         # Sources
-        triangle.c
-        rectangle.c
-        shape.c
+        bird.c
+        fish.c
+        animal.c
         container.c
         main.c
-        )
+        mammal.c mammal.h)
 
 add_executable(Task1 ${SOURCE_FILES})

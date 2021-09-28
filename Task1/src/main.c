@@ -34,10 +34,8 @@ int main(int argc, char *argv[]) {
     struct container *c;
     InitContainer(c);
 
-    ////cout << "argv[1] = " << argv[1] << "\n";
     if (!strcmp(argv[1], "-f")) {
-        //ifstream ifst(argv[2]);
-        FILE *ifst = fopen(argv[2], "r");
+        FILE *ifst = fopen(argv[2], "f");
         InContainer(c, ifst);
     } else if (!strcmp(argv[1], "-n")) {
         int size = atoi(argv[2]);

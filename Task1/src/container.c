@@ -23,8 +23,8 @@ void ClearContainer(struct container *c) {
 //------------------------------------------------------------------------------
 // Ввод содержимого контейнера из указанного потока
 void InContainer(struct container *c, FILE *ifst) {
-    struct shape *newShape;
-    while ((newShape = InShape(ifst)) != ((void *) 0)) {
+    struct animal *newShape;
+    while ((newShape = InAnimal(ifst)) != ((void *) 0)) {
         c->cont[c->len] = newShape;
         c->len++;
     }
@@ -34,7 +34,7 @@ void InContainer(struct container *c, FILE *ifst) {
 // Случайный ввод содержимого контейнера
 void InRndContainer(struct container *c, int size) {
     while (c->len < size) {
-        if ((c->cont[c->len] = InRndShape()) != ((void *) 0)) {
+        if ((c->cont[c->len] = InRndAnimal()) != ((void *) 0)) {
             c->len++;
         }
     }
@@ -46,7 +46,7 @@ void OutContainer(struct container *c, FILE *ofst) {
     fprintf(ofst, "Container contains %d elements.\n", c->len);
     for (int i = 0; i < c->len; i++) {
         fprintf(ofst, "%d: ", i);
-        OutShape(c->cont[i], ofst);
+        OutAnimal(c->cont[i], ofst);
     }
 }
 
