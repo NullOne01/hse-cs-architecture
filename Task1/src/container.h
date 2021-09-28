@@ -11,27 +11,27 @@
 //------------------------------------------------------------------------------
 // Простейший контейнер на основе одномерного массива
 struct container {
-    enum {max_len = 10000}; // максимальная длина
+    enum { max_len = 10000 }; // максимальная длина
     int len; // текущая длина
-    shape *cont[max_len];
+    struct shape *cont[max_len];
 };
 
 // Инициализация контейнера
-void Init(container &c);
+void InitContainer(struct container *c);
 
 // Очистка контейнера от элементов (освобождение памяти)
-void Clear(container &c);
+void ClearContainer(struct container *c);
 
 // Ввод содержимого контейнера из указанного потока
-void In(container &c, ifstream &ifst);
+void InContainer(struct container *c, FILE *ifst);
 
 // Случайный ввод содержимого контейнера
-void InRnd(container &c, int size);
+void InRndContainer(struct container *c, int size);
 
 // Вывод содержимого контейнера в указанный поток
-void Out(container &c, ofstream &ofst);
+void OutContainer(struct container *c, FILE *ofst);
 
 // Вычисление суммы периметров всех фигур в контейнере
-double PerimeterSum(container &c);
+double PerimeterSumContainer(struct container *c);
 
 #endif

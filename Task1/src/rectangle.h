@@ -5,8 +5,7 @@
 // rectangle.h - содержит описание прямоугольника  и его интерфейса
 //------------------------------------------------------------------------------
 
-#include <fstream>
-using namespace std;
+#include <stdio.h>
 
 # include "rnd.h"
 
@@ -16,15 +15,15 @@ struct rectangle {
 };
 
 // Ввод параметров прямоугольника из файла
-void In(rectangle &r, ifstream &ifst);
+int InRectangle(struct rectangle *r, FILE *ifst);
 
 // Случайный ввод параметров прямоугольника
-void InRnd(rectangle &r);
+void InRndRectangle(struct rectangle *t);
 
 // Вывод параметров прямоугольника в форматируемый поток
-void Out(rectangle &r, ofstream &ofst);
+void OutRectangle(struct rectangle *r, FILE *ofst);
 
 // Вычисление периметра прямоугольника
-double Perimeter(rectangle &r);
+double PerimeterRectangle(struct rectangle *r);
 
 #endif //__rectangle__

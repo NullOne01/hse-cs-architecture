@@ -12,25 +12,25 @@
 // структура, обобщающая все имеющиеся фигуры
 struct shape {
     // значения ключей для каждой из фигур
-    enum key {RECTANGLE, TRIANGLE};
-    key k; // ключ
+    enum KEY {RECTANGLE, TRIANGLE} k; // ключ
+
     // используемые альтернативы
     union { // используем простейшую реализацию
-        rectangle r;
-        triangle t;
+        struct rectangle r;
+        struct triangle t;
     };
 };
 
 // Ввод обобщенной фигуры
-shape *In(ifstream &ifdt);
+struct shape *InShape(FILE *ifst);
 
 // Случайный ввод обобщенной фигуры
-shape *InRnd();
+struct shape *InRndShape();
 
 // Вывод обобщенной фигуры
-void Out(shape &s, ofstream &ofst);
+void OutShape(struct shape *s, FILE *ofst);
 
 // Вычисление периметра обобщенной фигуры
-double Perimeter(shape &s);
+double PerimeterShape(struct shape *s);
 
 #endif

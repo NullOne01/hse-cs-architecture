@@ -5,8 +5,7 @@
 // triangle.h - содержит описание треугольника
 //------------------------------------------------------------------------------
 
-#include <fstream>
-using namespace std;
+#include <stdio.h>
 
 # include "rnd.h"
 
@@ -17,15 +16,15 @@ struct triangle {
 };
 
 // Ввод параметров треугольника из файла
-void In(triangle &t, ifstream &ifst);
+int InTriangle(struct triangle *t, FILE *ifst);
 
 // Случайный ввод параметров треугольника
-void InRnd(triangle &е);
+void InRndTriangle(struct triangle *t);
 
 // Вывод параметров треугольника в форматируемый поток
-void Out(triangle &t, ofstream &ofst);
+void OutTriangle(struct triangle *t, FILE *ofst);
 
 // Вычисление периметра треугольника
-double Perimeter(triangle &t);
+double PerimeterTriangle(struct triangle *t);
 
 #endif //__triangle__

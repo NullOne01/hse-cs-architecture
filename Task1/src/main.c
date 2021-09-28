@@ -3,74 +3,67 @@
 // обеспечивающую простое тестирование
 //------------------------------------------------------------------------------
 
-#include <iostream>
-#include <fstream>
-#include <cstdlib> // для функций rand() и srand()
-#include <ctime>   // для функции time()
-#include <cstring>
-
+#include <string.h>
+#include <time.h>
 #include "container.h"
 
 void errMessage1() {
-    cout << "incorrect command line!\n"
-            "  Waited:\n"
-            "     command -f infile outfile01 outfile02\n"
-            "  Or:\n"
-            "     command -n number outfile01 outfile02\n";
+    printf("incorrect command line!\n");
+    printf("  Waited:\n");
+    printf("     command -f infile outfile01 outfile02\n");
+    printf("  Or:\n");
+    printf("     command -n number outfile01 outfile02\n");
 }
 
 void errMessage2() {
-    cout << "incorrect qualifier value!\n"
-            "  Waited:\n"
-            "     command -f infile outfile01 outfile02\n"
-            "  Or:\n"
-            "     command -n number outfile01 outfile02\n";
+    printf("incorrect qualifier value!\n");
+    printf("  Waited:\n");
+    printf("     command -f infile outfile01 outfile02\n");
+    printf("  Or:\n");
+    printf("     command -n number outfile01 outfile02\n");
 }
 
 //------------------------------------------------------------------------------
-int main(int argc, char* argv[]) {
-    if(argc != 5) {
+int main(int argc, char *argv[]) {
+    if (argc != 5) {
         errMessage1();
         return 1;
     }
 
-    cout << "Start"<< endl;
-    container c;
-    Init(c);
+    printf("Start\n");
+    struct container *c;
+    InitContainer(c);
 
     ////cout << "argv[1] = " << argv[1] << "\n";
-    if(!strcmp(argv[1], "-f")) {
-        ifstream ifst(argv[2]);
-        In(c, ifst);
-    }
-    else if(!strcmp(argv[1], "-n")) {
-        auto size = atoi(argv[2]);
-        if((size < 1) || (size > 10000)) { 
-            cout << "incorrect numer of figures = "
-                 << size
-                 << ". Set 0 < number <= 10000\n";
+    if (!strcmp(argv[1], "-f")) {
+        //ifstream ifst(argv[2]);
+        FILE *ifst = fopen(argv[2], "r");
+        InContainer(c, ifst);
+    } else if (!strcmp(argv[1], "-n")) {
+        int size = atoi(argv[2]);
+        if ((size < 1) || (size > 10000)) {
+            printf("incorrect number of figures = %d. Set 0 < number <= 10000\n", size);
             return 3;
         }
         // системные часы в качестве инициализатора
-        srand(static_cast<unsigned int>(time(0)));
+        srand((unsigned int) (time(0)));
         // Заполнение контейнера генератором случайных чисел
-        InRnd(c, size);
-    }
-    else {
+        InRndContainer(c, size);
+    } else {
         errMessage2();
         return 2;
     }
 
     // Вывод содержимого контейнера в файл
-    ofstream ofst1(argv[3]);
-    ofst1 << "Filled container:\n";
-    Out(c, ofst1);
+    FILE *ofst1 = fopen(argv[3], "w");
+    fprintf(ofst1, "Filled container:\n");
+    OutContainer(c, ofst1);
 
     // The 2nd part of task
-    ofstream ofst2(argv[4]);
-    ofst2 << "Perimeter sum = " << PerimeterSum(c) << "\n";
+    FILE *ofst2 = fopen(argv[4], "w");
+    fprintf(ofst2, "Perimeter sum = %lf\n", PerimeterSumContainer(c));
 
-    Clear(c);
-    cout << "Stop"<< endl;
+    ClearContainer(c);
+    printf("Stop\n");
     return 0;
 }

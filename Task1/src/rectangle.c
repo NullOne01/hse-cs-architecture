@@ -7,25 +7,24 @@
 
 //------------------------------------------------------------------------------
 // Ввод параметров прямоугольника из файла
-void In(rectangle &r, ifstream &ifst) {
-    ifst >> r.x >> r.y;
+int InRectangle(struct rectangle *r, FILE *ifst) {
+    return fscanf(ifst, "%d %d", &r->x, &r->y);
 }
 
 // Случайный ввод параметров прямоугольника
-void InRnd(rectangle &r) {
-    r.x = Random();
-    r.y = Random();
+void InRndRectangle(struct rectangle *t) {
+    t->x = Random();
+    t->y = Random();
 }
 
 //------------------------------------------------------------------------------
 // Вывод параметров прямоугольника в форматируемый поток
-void Out(rectangle &r, ofstream &ofst) {
-    ofst << "It is Rectangle: x = " << r.x << ", y = " << r.y 
-         << ". Perimeter = " << Perimeter(r) << "\n";
+void OutRectangle(struct rectangle *r, FILE *ofst) {
+    fprintf(ofst, "It is Rectangle: x = %d, y = %d. Perimeter = %lf \n", r->x, r->y, PerimeterRectangle(r));
 }
 
 //------------------------------------------------------------------------------
 // Вычисление периметра прямоугольника
-double Perimeter(rectangle &r) {
-    return 2.0 * (r.x + r.y);
+double PerimeterRectangle(struct rectangle *r) {
+    return 2.0 * (r->x + r->y);
 }

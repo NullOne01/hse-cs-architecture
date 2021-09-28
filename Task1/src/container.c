@@ -6,55 +6,56 @@
 
 //------------------------------------------------------------------------------
 // Инициализация контейнера
-void Init(container &c) {
-    c.len = 0;
+void InitContainer(struct container *c) {
+    c->len = 0;
 }
 
 //------------------------------------------------------------------------------
 // Очистка контейнера от элементов (освобождение памяти)
-void Clear(container &c) {
-    for(int i = 0; i < c.len; i++) {
-        delete c.cont[i];
+void ClearContainer(struct container *c) {
+    for (int i = 0; i < c->len; i++) {
+        free(&c->cont[i]);
     }
-    c.len = 0;
+
+    c->len = 0;
 }
 
 //------------------------------------------------------------------------------
 // Ввод содержимого контейнера из указанного потока
-void In(container &c, ifstream &ifst) {
-    while(!ifst.eof()) {
-        if((c.cont[c.len] = In(ifst)) != 0) {
-            c.len++;
-        }
+void InContainer(struct container *c, FILE *ifst) {
+    struct shape *newShape;
+    while ((newShape = InShape(ifst)) != ((void *) 0)) {
+        c->cont[c->len] = newShape;
+        c->len++;
     }
 }
 
 //------------------------------------------------------------------------------
 // Случайный ввод содержимого контейнера
-void InRnd(container &c, int size) {
-    while(c.len < size) {
-        if((c.cont[c.len] = InRnd()) != nullptr) {
-            c.len++;
+void InRndContainer(struct container *c, int size) {
+    while (c->len < size) {
+        if ((c->cont[c->len] = InRndShape()) != ((void *) 0)) {
+            c->len++;
         }
     }
 }
 
 //------------------------------------------------------------------------------
 // Вывод содержимого контейнера в указанный поток
-void Out(container &c, ofstream &ofst) {
-    ofst << "Container contains " << c.len << " elements." << endl;
-    for(int i = 0; i < c.len; i++) {
-        ofst << i << ": ";
-        Out(*(c.cont[i]), ofst);
+void OutContainer(struct container *c, FILE *ofst) {
+    fprintf(ofst, "Container contains %d elements.\n", c->len);
+    for (int i = 0; i < c->len; i++) {
+        fprintf(ofst, "%d: ", i);
+        OutShape(c->cont[i], ofst);
     }
 }
 
 //------------------------------------------------------------------------------
 // Вычисление суммы периметров всех фигур в контейнере
-double PerimeterSum(container &c) {
+double PerimeterSumContainer(struct container *c) {
     double sum = 0.0;
-    for(int i = 0; i < c.len; i++) {
-        sum += Perimeter(*(c.cont[i]));
+    for (int i = 0; i < c->len; i++) {
+        sum += PerimeterShape(c->cont[i]);
     }
     return sum;
 }
