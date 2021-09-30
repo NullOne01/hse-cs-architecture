@@ -18,6 +18,7 @@ set(SOURCE_FILES
         fish.h
         animal.h
         container.h
+        mammal.h
 
         # Sources
         bird.c
@@ -25,6 +26,6 @@ set(SOURCE_FILES
         animal.c
         container.c
         main.c
-        mammal.c mammal.h)
+        mammal.c)
 
 add_executable(Task1 ${SOURCE_FILES})
