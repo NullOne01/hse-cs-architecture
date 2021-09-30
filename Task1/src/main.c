@@ -31,6 +31,10 @@ int main(int argc, char *argv[]) {
     }
 
     printf("Start\n");
+    clock_t start, end;
+    double cpu_time_used;
+    start = clock();
+
     struct container c;
     InitContainer(&c);
 
@@ -65,6 +69,9 @@ int main(int argc, char *argv[]) {
     OutContainer(&c, ofst2);
 
     ClearContainer(&c);
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time elapsed (seconds): %f\n", cpu_time_used);
     printf("Stop\n");
     return 0;
 }
