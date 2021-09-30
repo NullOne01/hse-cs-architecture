@@ -14,7 +14,7 @@ void InitContainer(struct container *c) {
 // Очистка контейнера от элементов (освобождение памяти)
 void ClearContainer(struct container *c) {
     for (int i = 0; i < c->len; i++) {
-        free(&c->cont[i]);
+        free(c->cont[i]);
     }
 
     c->len = 0;
