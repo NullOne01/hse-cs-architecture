@@ -1,7 +1,0 @@
-Filled container:
-Container contains 5 elements.
-0: It is Rectangle: x = 7, y = 19. Perimeter = 52.000000 
-1: It is Triangle: a = 1, b = 17, c = 17. Perimeter = 35.000000 
-2: It is Triangle: a = 2, b = 15, c = 15. Perimeter = 32.000000 
-3: It is Triangle: a = 6, b = 13, c = 12. Perimeter = 31.000000 
-4: It is Rectangle: x = 20, y = 2. Perimeter = 44.000000 
