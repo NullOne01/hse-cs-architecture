@@ -31,7 +31,7 @@ void InRndContainer(struct container *c, int size);
 // Вывод содержимого контейнера в указанный поток
 void OutContainer(struct container *c, FILE *ofst);
 
-// Вычисление суммы периметров всех фигур в контейнере
-double PerimeterSumContainer(struct container *c);
+// Сортировка шеллом по возрастанию
+void SortShellContainer(struct container *c);
 
 #endif

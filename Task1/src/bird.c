@@ -2,34 +2,41 @@
 // bird.c - содержит функции обработки птицы
 //------------------------------------------------------------------------------
 
+#include <string.h>
 #include "bird.h"
 
 //------------------------------------------------------------------------------
 // Ввод параметров птицы из потока
 int InBird(struct bird *b, FILE *ifst) {
-    return fscanf(ifst, "%d %d %d", &t->a, &t->b, &t->c);
+    char migrantStr[10];
+    if (fscanf(ifst, "%s", migrantStr) == EOF)
+        return EOF;
+
+    if (strcmp(migrantStr, "TRUE") == 0) {
+        b->isMigrant = true;
+    } else if (strcmp(migrantStr, "FALSE") == 0) {
+        b->isMigrant = false;
+    } else {
+        return 0;
+    }
+
+    return 1;
 }
 
 // Случайный ввод параметров птицы
 void InRndBird(struct bird *b) {
-    t->a = Random();
-    t->b = Random();
-    do {
-        t->c = Random();
-    } while((t->c >= (t->a + t->b))
-          || (t->a >= (t->c + t->b))
-          || (t->b >= (t->c + t->a)));
+    b->isMigrant = RandomRange(0, 1);
 }
 
 //------------------------------------------------------------------------------
 // Вывод параметров птицы в поток
 void OutBird(struct bird *b, FILE *ofst) {
-    fprintf(ofst, "It is Triangle: a = %d, b = %d, c = %d. Perimeter = %lf \n", t->a, t->b, t->c,
-            PerimeterTriangle(t));
-}
+    char *migrantStr;
+    if (b->isMigrant) {
+        migrantStr = "YES";
+    } else {
+        migrantStr = "NO";
+    }
 
-//------------------------------------------------------------------------------
-// Вычисление периметра птицы
-double PerimeterTriangle(struct bird *t) {
-    return t->a + t->b + t->c;
+    fprintf(ofst, "It is Bird: isMigrant = %s.", migrantStr);
 }

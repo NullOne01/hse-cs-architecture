@@ -20,9 +20,6 @@ int InFish(struct fish *f, FILE *ifst);
 void InRndFish(struct fish *f);
 
 // Вывод параметров рыбы в форматируемый поток
-void OutFish(struct fish *f, FILE *ofst);
-
-// Вычисление периметра рыбы
-double PerimeterRectangle(struct fish *f);
+const char* OutFish(struct fish *f, FILE *ofst);
 
 #endif //__fish__

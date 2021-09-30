@@ -12,10 +12,12 @@
 //------------------------------------------------------------------------------
 // структура, обобщающая все имеющиеся фигуры
 struct animal {
-    // значения ключей для каждой из фигур
-    enum KEY {FISH, BIRD, MAMMAL} k; // ключ
+    enum { max_name_len = 256 }; // максимальная длина имени
 
-    const char* name;
+    // значения ключей для каждой из фигур
+    enum KEY { FISH, BIRD, MAMMAL } k; // ключ
+
+    char name[max_name_len];
     int mass_gram;
 
     // используемые альтернативы
@@ -33,9 +35,9 @@ struct animal *InAnimal(FILE *ifst);
 struct animal *InRndAnimal();
 
 // Вывод обобщенной фигуры
-void OutAnimal(struct animal *s, FILE *ofst);
+void OutAnimal(struct animal *a, FILE *ofst);
 
-// Вычисление периметра обобщенной фигуры
-double PerimeterShape(struct animal *s);
+// Общая для всех альтернатив функция
+double CalculateTask(struct animal *a);
 
 #endif //__animal__

@@ -24,7 +24,4 @@ void InRndBird(struct bird *b);
 // Вывод параметров птицы в форматируемый поток
 void OutBird(struct bird *b, FILE *ofst);
 
-// Вычисление периметра птицы
-double PerimeterTriangle(struct bird *b);
-
 #endif //__bird__

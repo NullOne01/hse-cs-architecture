@@ -23,9 +23,9 @@ void ClearContainer(struct container *c) {
 //------------------------------------------------------------------------------
 // Ввод содержимого контейнера из указанного потока
 void InContainer(struct container *c, FILE *ifst) {
-    struct animal *newShape;
-    while ((newShape = InAnimal(ifst)) != ((void *) 0)) {
-        c->cont[c->len] = newShape;
+    struct animal *newAnimal;
+    while ((newAnimal = InAnimal(ifst)) != ((void *) 0)) {
+        c->cont[c->len] = newAnimal;
         c->len++;
     }
 }
@@ -50,12 +50,18 @@ void OutContainer(struct container *c, FILE *ofst) {
     }
 }
 
-//------------------------------------------------------------------------------
-// Вычисление суммы периметров всех фигур в контейнере
-double PerimeterSumContainer(struct container *c) {
-    double sum = 0.0;
-    for (int i = 0; i < c->len; i++) {
-        sum += PerimeterShape(c->cont[i]);
+// Сортировка шеллом по возрастанию
+void SortShellContainer(struct container *c) {
+    for (int s = c->len / 2; s > 0; s /= 2) {
+        for (int i = 0; i < c->len; i++) {
+            for (int j = i + s; j < c->len; j += s) {
+                // Мы здесь пересчитываем каждый раз, но не страшно.
+                if (CalculateTask(c->cont[i]) > CalculateTask(c->cont[j])) {
+                    struct animal *temp = c->cont[j];
+                    c->cont[j] = c->cont[i];
+                    c->cont[i] = temp;
+                }
+            }
+        }
     }
-    return sum;
 }
