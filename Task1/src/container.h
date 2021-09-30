@@ -6,14 +6,14 @@
 // представляющий простейший контейнер
 //------------------------------------------------------------------------------
 
-#include "shape.h"
+#include "animal.h"
 
 //------------------------------------------------------------------------------
 // Простейший контейнер на основе одномерного массива
 struct container {
     enum { max_len = 10000 }; // максимальная длина
     int len; // текущая длина
-    struct shape *cont[max_len];
+    struct animal *cont[max_len];
 };
 
 // Инициализация контейнера
@@ -31,7 +31,7 @@ void InRndContainer(struct container *c, int size);
 // Вывод содержимого контейнера в указанный поток
 void OutContainer(struct container *c, FILE *ofst);
 
-// Вычисление суммы периметров всех фигур в контейнере
-double PerimeterSumContainer(struct container *c);
+// Сортировка шеллом по возрастанию
+void SortShellContainer(struct container *c);
 
 #endif

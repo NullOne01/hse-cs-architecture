@@ -31,14 +31,12 @@ int main(int argc, char *argv[]) {
     }
 
     printf("Start\n");
-    struct container *c;
-    InitContainer(c);
+    struct container c;
+    InitContainer(&c);
 
-    ////cout << "argv[1] = " << argv[1] << "\n";
     if (!strcmp(argv[1], "-f")) {
-        //ifstream ifst(argv[2]);
         FILE *ifst = fopen(argv[2], "r");
-        InContainer(c, ifst);
+        InContainer(&c, ifst);
     } else if (!strcmp(argv[1], "-n")) {
         int size = atoi(argv[2]);
         if ((size < 1) || (size > 10000)) {
@@ -48,7 +46,7 @@ int main(int argc, char *argv[]) {
         // системные часы в качестве инициализатора
         srand((unsigned int) (time(0)));
         // Заполнение контейнера генератором случайных чисел
-        InRndContainer(c, size);
+        InRndContainer(&c, size);
     } else {
         errMessage2();
         return 2;
@@ -57,13 +55,16 @@ int main(int argc, char *argv[]) {
     // Вывод содержимого контейнера в файл
     FILE *ofst1 = fopen(argv[3], "w");
     fprintf(ofst1, "Filled container:\n");
-    OutContainer(c, ofst1);
+    OutContainer(&c, ofst1);
 
     // The 2nd part of task
-    FILE *ofst2 = fopen(argv[4], "w");
-    fprintf(ofst2, "Perimeter sum = %lf\n", PerimeterSumContainer(c));
+    SortShellContainer(&c);
 
-    ClearContainer(c);
+    FILE *ofst2 = fopen(argv[4], "w");
+    fprintf(ofst2, "Sorted container:\n");
+    OutContainer(&c, ofst2);
+
+    ClearContainer(&c);
     printf("Stop\n");
     return 0;
 }

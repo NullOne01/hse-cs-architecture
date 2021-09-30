@@ -1,1 +1,0 @@
-Perimeter sum = 1016.000000
