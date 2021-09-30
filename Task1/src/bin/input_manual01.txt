@@ -3,7 +3,10 @@ Johny 100
 RIVER
 1
 Sanya 9999
-RIVER
+SEA
+1
+Arkadiy 69
+LAKE
 2
 Valera 10
 TRUE
