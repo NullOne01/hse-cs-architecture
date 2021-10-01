@@ -37,7 +37,7 @@ void InRndFish(struct fish *f) {
 
 //------------------------------------------------------------------------------
 // Вывод параметров рыбы в форматируемый поток
-const char* OutFish(struct fish *f, FILE *ofst) {
+void OutFish(struct fish *f, FILE *ofst) {
     char* habitatStr;
     if (f->habitat == RIVER) {
         habitatStr = "RIVER";
