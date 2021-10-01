@@ -5,6 +5,7 @@
 #include "rnd.h"
 #include <string.h>
 
+// Случайная строка. Использует выделенную память.
 char *RandomString(char *str, size_t size) {
     const char *charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (size) {
