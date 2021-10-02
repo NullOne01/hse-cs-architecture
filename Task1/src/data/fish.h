@@ -6,7 +6,6 @@
 //------------------------------------------------------------------------------
 
 #include <stdio.h>
-#include "rnd.h"
 
 // рыба
 struct fish {
@@ -20,6 +19,6 @@ int InFish(struct fish *f, FILE *ifst);
 void InRndFish(struct fish *f);
 
 // Вывод параметров рыбы в форматируемый поток
-const char* OutFish(struct fish *f, FILE *ofst);
+void OutFish(struct fish *f, FILE *ofst);
 
 #endif //__fish__

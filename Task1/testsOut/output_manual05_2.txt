@@ -1,0 +1,8 @@
+Sorted container:
+Container contains 6 elements.
+0: It is Mammal: type = PREDATOR. Name = Lion, mass = 50000. Task result: 0.008040
+1: It is Mammal: type = HERBIVORE. Name = Zebra, mass = 20000. Task result: 0.025000
+2: It is Mammal: type = HERBIVORE. Name = Loshadka, mass = 30000. Task result: 0.026900
+3: It is Mammal: type = PREDATOR. Name = Cat, mass = 10000. Task result: 0.028000
+4: It is Mammal: type = INSECTIVOROUS. Name = Muroved, mass = 10000. Task result: 0.073800
+5: It is Mammal: type = INSECTIVOROUS. Name = hedgehog, mass = 10000. Task result: 0.082700
