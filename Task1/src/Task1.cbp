@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Task1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Task1">
+				<Option output="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/bin/Task1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/../bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 Task1"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Task1/fast">
+				<Option output="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/bin/Task1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/../bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 Task1/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/animal.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/animal.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/bird.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/bird.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/container.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/container.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/fish.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/fish.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/mammal.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/data/mammal.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/main.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/utilities/rnd.c">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/utilities/rnd.h">
+			<Option target="Task1"/>
+		</Unit>
+		<Unit filename="/Users/nullone/CLionProjects/hse-cs-architecture/Task1/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
