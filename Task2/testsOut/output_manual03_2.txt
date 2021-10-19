@@ -1,0 +1,10 @@
+Sorted container:
+Container contains 8 elements.
+0: It is Bird: isMigrant = NO. Name = Galka, mass = 1990. Task result: 0.241206
+1: It is Bird: isMigrant = YES. Name = Gra4, mass = 1000. Task result: 0.334000
+2: It is Bird: isMigrant = YES. Name = Drozd, mass = 1500. Task result: 0.343333
+3: It is Bird: isMigrant = YES. Name = Ivolga, mass = 1600. Task result: 0.381250
+4: It is Bird: isMigrant = NO. Name = Soyka, mass = 1032. Task result: 0.502907
+5: It is Bird: isMigrant = YES. Name = Goose, mass = 1010. Task result: 0.503960
+6: It is Bird: isMigrant = NO. Name = Vorona, mass = 1092. Task result: 0.576007
+7: It is Bird: isMigrant = NO. Name = Snegir, mass = 1000. Task result: 0.616000

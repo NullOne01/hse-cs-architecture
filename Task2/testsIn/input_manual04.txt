@@ -1,0 +1,18 @@
+1
+Okun 1000
+RIVER
+1
+Osetr 1500
+RIVER
+1
+Semga 3000
+SEA
+1
+Treska 2000
+SEA
+1
+Lenok 1230
+LAKE
+1
+Omul 1004
+LAKE
