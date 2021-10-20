@@ -1,0 +1,24 @@
+1
+Johny 100
+RIVER
+1
+Sanya 9999
+SEA
+1
+Arkadiy 69
+LAKE
+2
+Valera 10
+TRUE
+2
+AntiValera 100
+FALSE
+3
+Lion 10000
+PREDATOR
+3
+Konik 10000
+HERBIVORE
+3
+Muroved 10000
+INSECTIVOROUS

@@ -1,0 +1,24 @@
+2
+Gra4 1000
+TRUE
+2
+Goose 1010
+TRUE
+2
+Drozd 1500
+TRUE
+2
+Ivolga 1600
+TRUE
+2
+Snegir 1000
+FALSE
+2
+Soyka 1032
+FALSE
+2
+Vorona 1092
+FALSE
+2
+Galka 1990
+FALSE

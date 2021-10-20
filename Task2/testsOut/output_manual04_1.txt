@@ -1,0 +1,8 @@
+Filled container:
+Container contains 6 elements.
+0: It is Fish: habitat = RIVER. Name = Okun, mass = 1000. Task result: 0.413000
+1: It is Fish: habitat = RIVER. Name = Osetr, mass = 1500. Task result: 0.350000
+2: It is Fish: habitat = SEA. Name = Semga, mass = 3000. Task result: 0.164333
+3: It is Fish: habitat = SEA. Name = Treska, mass = 2000. Task result: 0.309000
+4: It is Fish: habitat = LAKE. Name = Lenok, mass = 1230. Task result: 0.410569
+5: It is Fish: habitat = LAKE. Name = Omul, mass = 1004. Task result: 0.411355
