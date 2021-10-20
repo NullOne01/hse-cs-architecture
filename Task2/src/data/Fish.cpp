@@ -10,16 +10,16 @@ Fish *Fish::in(FILE *ifst) {
     if (fscanf(ifst, "%s %d", name, &mass) == EOF)
         return nullptr;
 
-    char habitatStr[10];
-    if (fscanf(ifst, "%s", habitatStr) == EOF)
+    char habitat_str[10];
+    if (fscanf(ifst, "%s", habitat_str) == EOF)
         return nullptr;
 
     Fish::HABITAT new_habitat;
-    if (strcmp(habitatStr, "RIVER") == 0) {
+    if (strcmp(habitat_str, "RIVER") == 0) {
         new_habitat = RIVER;
-    } else if (strcmp(habitatStr, "SEA") == 0) {
+    } else if (strcmp(habitat_str, "SEA") == 0) {
         new_habitat = SEA;
-    } else if (strcmp(habitatStr, "LAKE") == 0) {
+    } else if (strcmp(habitat_str, "LAKE") == 0) {
         new_habitat = LAKE;
     } else {
         return nullptr;
