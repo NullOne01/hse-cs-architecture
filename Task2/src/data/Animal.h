@@ -11,8 +11,6 @@ private:
 public:
     Animal(const char *name, int mass_gram);
 
-    ~Animal();
-
     const char *getName() const;
 
     int getMassGram() const;

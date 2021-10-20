@@ -5,6 +5,7 @@
 
 class Random {
 public:
+    // Возвращает случайное число в диапазоне [min, max]
     static int RandomRange(int min, int max);
 
     // Случайная строка. Сама выделяет память.

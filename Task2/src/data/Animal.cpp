@@ -1,7 +1,3 @@
-//
-// Created by Даниил Фёдоров on 19.10.2021.
-//
-
 #include <cstdio>
 #include <cstring>
 #include "Animal.h"
@@ -66,8 +62,4 @@ double Animal::calculateTask() const {
     res /= (double) mass_gram_;
 
     return res;
-}
-
-Animal::~Animal() {
-    // delete name_;
 }
