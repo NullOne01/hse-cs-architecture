@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File. Input file 1",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-f",
+                "testsIn/input_manual01.txt",
+                "testsOut/output_manual01_1.txt",
+                "testsOut/output_manual01_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Input file 2",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-f",
+                "testsIn/input_manual02.txt",
+                "testsOut/output_manual02_1.txt",
+                "testsOut/output_manual02_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Input file 3",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-f",
+                "testsIn/input_manual03.txt",
+                "testsOut/output_manual03_1.txt",
+                "testsOut/output_manual03_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Input file 4",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-f",
+                "testsIn/input_manual04.txt",
+                "testsOut/output_manual04_1.txt",
+                "testsOut/output_manual04_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Input file 5",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-f",
+                "testsIn/input_manual05.txt",
+                "testsOut/output_manual05_1.txt",
+                "testsOut/output_manual05_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Random 100",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-n",
+                "100",
+                "testsOut/output_random100_1.txt",
+                "testsOut/output_random100_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Random 1000",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-n",
+                "1000",
+                "testsOut/output_random1000_1.txt",
+                "testsOut/output_random1000_2.txt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File. Random 10000",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-n",
+                "10000",
+                "testsOut/output_random10000_1.txt",
+                "testsOut/output_random10000_2.txt"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

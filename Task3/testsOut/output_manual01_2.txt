@@ -1,0 +1,10 @@
+Sorted container:
+Container contains 8 elements.
+0: It is Mammal: type = PREDATOR. Name = Lion, mass = 10000. Task result: 0.0402
+1: It is Mammal: type = HERBIVORE. Name = Konik, mass = 10000. Task result: 0.0508
+2: It is Fish: habitat = SEA. Name = Sanya, mass = 9999. Task result: 0.050805080508050805
+3: It is Mammal: type = INSECTIVOROUS. Name = Muroved, mass = 10000. Task result: 0.0738
+4: It is Fish: habitat = RIVER. Name = Johny, mass = 100. Task result: 5.2
+5: It is Bird: isMigrant = NO. Name = AntiValera, mass = 100. Task result: 9.99
+6: It is Fish: habitat = LAKE. Name = Arkadiy, mass = 69. Task result: 10.27536231884058
+7: It is Bird: isMigrant = YES. Name = Valera, mass = 10. Task result: 60.3
