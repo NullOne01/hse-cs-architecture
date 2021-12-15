@@ -1,6 +1,6 @@
 #include <thread>
 #include "Consumer.h"
-#include "Constants.h"
+#include "../utilities/Constants.h"
 
 void Consumer::run() {
     for (int i = 0; i < NUM_OF_STOLEN_ITEMS; i++) {

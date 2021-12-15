@@ -2,7 +2,7 @@
 #include "model/Producer.h"
 #include "model/Consumer.h"
 #include "model/ProducerConsumer.h"
-#include "model/Constants.h"
+#include "utilities/Constants.h"
 
 int main() {
     auto *ring_buffer1 = new RingBuffer(NUM_OF_STOLEN_ITEMS);
