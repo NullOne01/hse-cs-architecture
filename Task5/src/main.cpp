@@ -5,8 +5,11 @@
 #include "utilities/Constants.h"
 
 int main() {
-    // srand(SEED);
     srand(time(nullptr));
+
+    clock_t start, end;
+    double cpu_time_used;
+    start = clock();
 
     // Буфер для места перед грузовиком. Сюда Иванов несёт вещи, а потом Петров их заносит в грузовик
     auto *ring_buffer1 = new RingBuffer(5);
@@ -31,5 +34,10 @@ int main() {
 
     std::cout << "Program is finished!" << std::endl;
     std::cout << "Total balance: " << consumer->getSumCounter() << std::endl;
+
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time elapsed (seconds): %f\n", cpu_time_used);
+
     return 0;
 }
