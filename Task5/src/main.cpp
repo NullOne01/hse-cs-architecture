@@ -5,7 +5,8 @@
 #include "utilities/Constants.h"
 
 int main() {
-    srand(SEED);
+    // srand(SEED);
+    srand(time(nullptr));
 
     // Буфер для места перед грузовиком. Сюда Иванов несёт вещи, а потом Петров их заносит в грузовик
     auto *ring_buffer1 = new RingBuffer(5);
