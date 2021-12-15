@@ -8,10 +8,10 @@ void Consumer::run() {
         {
             std::unique_lock<std::mutex> unique_lock(mutex2);
 
-            //заснуть, если пусто
+            // заснуть, если грузовик пустой
             buffer_->getNotEmptyCond().wait(unique_lock, [this] { return !buffer_->isEmpty(); });
 
-            //запись в общий буфер
+            // чтение из грузовика
             data = buffer_->readValue();
             sum_counter_ += data;
         }

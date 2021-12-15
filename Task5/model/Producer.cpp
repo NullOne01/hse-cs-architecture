@@ -3,16 +3,16 @@
 
 void Producer::run() {
     for (int i = 0; i < NUM_OF_STOLEN_ITEMS; i++) {
-        //создать элемент для буфера
+        //создать случайную стоимость товара
         int data = rand() % 11 + 1;
 
         {
             std::unique_lock<std::mutex> unique_lock(mutex1);
 
-            //заснуть, если заполненно
+            // заснуть, если место перед грузовиком заполнено
             buffer_->getNotFullCond().wait(unique_lock, [this] { return !buffer_->isFull(); });
 
-            //запись в общий буфер
+            // запись предмета в место перед грузовиком
             buffer_->writeValue(data);
         }
 
