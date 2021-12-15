@@ -3,4 +3,4 @@ project(Task5)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Task5 main.cpp)
+add_executable(Task5 main.cpp model/RingBuffer.cpp model/RingBuffer.h)
